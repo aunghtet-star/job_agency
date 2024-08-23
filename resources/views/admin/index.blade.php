@@ -52,7 +52,7 @@
             </div>
             <div class="form-group">
                 <label for="">Role</label>
-                <input type="text" name="role" value="{{ $data->role }}" class="form-control" disabled>
+                <input type="text" name="role" value="{{ $data->role }}" class="form-control" >
             </div>
 
             <div class="form-group">

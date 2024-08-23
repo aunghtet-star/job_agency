@@ -93,9 +93,16 @@ class AgentJobpostController extends Controller
 
     //delete job
     public function delete($id){
-        // dd($id);
-        Jobpost::where('id', $id)->delete();
-        return back()->with(['deleteSuccess'=>'job Deleted...']);
+        $exist_post = DB::table('applyjobs')
+            ->where('post_id', $id)
+            ->get()->isEmpty();
+
+        if($exist_post == true){
+            Jobpost::where('id', $id)->delete();
+            return back()->with(['deleteSuccess'=>'job Deleted...']);
+        }else{
+            return back()->with(['deleteSuccess' => 'This post cannot delete cause of job applied user..']);
+        }
     }
 
 

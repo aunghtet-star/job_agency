@@ -20,7 +20,7 @@
 
     <div class="row px-xl-5">
         <div class="col-12 col-lg-3 offset-lg-9 mb-4">
-            <form action="" method="GET">
+            <form action="{{ route('home') }}" method="GET">
                 @csrf
                 <div class="d-flex">
                     <input type="text" name="key" class="form-control" placeholder="Search by city..." value="{{ request('key') }}">
