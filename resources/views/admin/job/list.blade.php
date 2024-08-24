@@ -68,8 +68,8 @@
                                         <th>ID</th>
                                         <th>Title</th>
                                         <th>Description</th>
+                                        <th>Name</th>
                                         <th>Location</th>
-                                        <th>Author Name</th>
                                         <th>Company</th>
                                         <th>Category</th>
                                         <th>Visibility</th>

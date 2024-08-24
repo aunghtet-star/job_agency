@@ -29,7 +29,7 @@ class RegisteredUserController extends Controller
             })
             ->orderBy('id', 'desc')
             ->where('visibility', 'Public')
-            ->paginate(5);
+            ->get();
 
         return view('user.home', compact('posts', 'applied'));
     }

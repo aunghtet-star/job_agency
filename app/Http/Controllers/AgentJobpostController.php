@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Models\Jobpost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\DB;
 class AgentJobpostController extends Controller
 {
     //direct Job Post list page

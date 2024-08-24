@@ -23,7 +23,7 @@
             <form action="{{ route('home') }}" method="GET">
                 @csrf
                 <div class="d-flex">
-                    <input type="text" name="key" class="form-control" placeholder="Search by city..." value="{{ request('key') }}">
+                    <input type="text" name="key" class="form-control" placeholder="Search..." value="{{ request('key') }}">
                     <button class="btn bg-dark text-white" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
