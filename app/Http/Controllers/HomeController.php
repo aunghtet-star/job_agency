@@ -29,7 +29,7 @@ class HomeController extends Controller
             ->orderBy('id', 'desc')
             ->where('visibility', 'Public')
             ->paginate(5);
-
+        $posts->appends(request()->all());
         return view('user.home', compact('posts', 'applied'));
 
     }
