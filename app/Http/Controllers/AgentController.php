@@ -25,7 +25,7 @@ class AgentController extends Controller
             ->orderBy('id', 'desc')
             ->paginate(5);
         // dd($categories->toArray());
-        return view('admin.category.list', compact('categories'));
+        return view('agent.category.list', compact('categories'));
     }
 
     public function edit($id)
