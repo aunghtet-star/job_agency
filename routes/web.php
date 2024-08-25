@@ -92,7 +92,8 @@ Route::middleware(['auth'])->group(function () {
 
     // Agent
     Route::group(['prefix'=>'agent', 'middleware'=>'agent_auth'], function(){
-        Route::get('dashboard', [AgentController::class, 'index'])->name('profile');
+        Route::get('dashboard', [AgentController::class, 'dashboard'])->name('dashboard');
+        Route::get('profile', [AgentController::class, 'index'])->name('profile');
         Route::get('edit/{id}', [AgentController::class, 'edit'])->name('agent#user#edit');
         Route::post('update/{id}', [AgentController::class, 'userUpdate'])->name('agent#user#update');
         Route::get('delete/{id}', [AgentController::class, 'delete'])->name('agent#user#delete');

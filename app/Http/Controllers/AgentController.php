@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -16,6 +17,15 @@ class AgentController extends Controller
         $id = Auth::id();
         $data = User::where('id', $id)->findOrFail($id);
         return view('agent.index', compact('data'));
+    }
+    public function dashboard(){
+        $categories = Category::when(request('key'), function($query){
+            $query->where('name','like','%'. request('key') .'%');
+        })
+            ->orderBy('id', 'desc')
+            ->paginate(5);
+        // dd($categories->toArray());
+        return view('admin.category.list', compact('categories'));
     }
 
     public function edit($id)

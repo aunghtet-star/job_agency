@@ -73,10 +73,10 @@
                                 <i class="fas fa-tachometer-alt"></i>Home Page
                             </a>
                         </li> --}}
-                        <li>
-                            <a href="{{route('profile')}}" class="text-white">
-                                <i class="fa-solid fa-list"></i>Profile</a>
-                        </li>
+{{--                        <li>--}}
+{{--                            <a href="{{route('profile')}}" class="text-white">--}}
+{{--                                <i class="fa-solid fa-list"></i>Profile</a>--}}
+{{--                        </li>--}}
                         <li>
                             <a href="{{route('agent#category#list')}}" class="text-white">
                                 <i class="fas fa-chart-bar"></i>Category</a>

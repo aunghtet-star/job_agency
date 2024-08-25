@@ -39,8 +39,9 @@
     <div class="col-lg-12 h-auto mb-30">
         <div class="h-100 bg-light p-30">
             <h3 class="mt-4">{{ $post->title }}</h3>
-            <div class="mb-2" id="content">{{ $post->description }}</div>
-            <div class="mb-2" id="content">Location: {{ $post->location }}</div>
+            <h5 class="mb-2" id="content">Company| {{ $post->company }}</h5>
+            <h5 class="mb-2" id="content">Location| {{ $post->location }}</h5>
+            <h5 class="mb-2" id="content">Job Description| {{ $post->description }}</h5>
             <div class="updated pb-4">
                 <p class="card-text font-italic"><small class="text-muted">Last updated {{ $post->updated_at->format('j-F-Y') }} ago</small></p>
             </div>

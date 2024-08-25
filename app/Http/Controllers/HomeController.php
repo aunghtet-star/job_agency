@@ -22,7 +22,9 @@ class HomeController extends Controller
         //Get all public posts
         $posts = Jobpost::when(request('key'), function($query){
             $query->orWhere('location','like','%'. request('key') .'%')
-                ->orWhere('title','like','%'. request('key') .'%');
+                ->orWhere('title','like','%'. request('key') .'%')
+                ->orWhere('description','like','%'. request('key') .'%')
+                ->orWhere('company','like','%'. request('key') .'%');
             })
             ->orderBy('id', 'desc')
             ->where('visibility', 'Public')
